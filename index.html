@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Bhattarai | Data Science & AI Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            500: '#f59e0b',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.5), transparent);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f59e0b;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark-800/90 backdrop-blur-sm z-50 border-b border-amber-500/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-amber-500">SB</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-amber-500 transition">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-amber-500 transition">Experience</a>
+                    <a href="#education" class="text-gray-300 hover:text-amber-500 transition">Education</a>
+                    <a href="#skills" class="text-gray-300 hover:text-amber-500 transition">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-amber-500 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-300 hover:text-amber-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-dark-900/95 z-40 pt-20 px-4">
+        <div class="flex flex-col space-y-6 text-center">
+            <a href="#about" class="text-2xl text-gray-300 hover:text-amber-500 transition">About</a>
+            <a href="#experience" class="text-2xl text-gray-300 hover:text-amber-500 transition">Experience</a>
+            <a href="#education" class="text-2xl text-gray-300 hover:text-amber-500 transition">Education</a>
+            <a href="#skills" class="text-2xl text-gray-300 hover:text-amber-500 transition">Skills</a>
+            <a href="#contact" class="text-2xl text-gray-300 hover:text-amber-500 transition">Contact</a>
+            <button class="mt-8 px-6 py-3 bg-amber-500 text-dark-900 font-semibold rounded-lg hover:bg-amber-600 transition">
+                Download Resume
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 glow-text">Saurav Bhattarai</h1>
+                <h2 class="text-xl md:text-2xl text-amber-500 italic mb-6">Data Science & AI Leader | Founding Operations Expert | Healthcare Technology Innovator</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Visionary technology leader with a proven track record of transforming traditional businesses into data-driven, scalable operations.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3 bg-amber-500 text-dark-900 font-semibold rounded-lg hover:bg-amber-600 transition">
+                        Contact Me
+                    </a>
+                    <button class="px-6 py-3 border border-amber-500 text-amber-500 font-semibold rounded-lg hover:bg-amber-500/10 transition">
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-500/30">
+                        <img src="http://static.photos/technology/640x360/42" alt="Saurav Bhattarai" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-amber-500 text-dark-900 px-4 py-2 rounded-lg font-bold">
+                        Available for India Ops
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-8 text-center glow-text">Executive Summary</h2>
+        <div class="bg-dark-800 rounded-xl p-8 shadow-lg">
+            <p class="text-lg mb-6">
+                Exceptional at taking complex, ambiguous challenges and systematically building scalable solutions — exactly what Next billion dollar solution should look like.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-500">Current Focus</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="text-amber-500 mr-2 mt-1"></i>
+                            <span>Pursuing advanced education at <strong>IIT Guwahati</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="text-amber-500 mr-2 mt-1"></i>
+                            <span>Serving as <strong>CTO of a growing startup</strong></span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-500">Core Competencies</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="text-amber-500 mr-2 mt-1"></i>
+                            <span>Operations & Market Entry Strategy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="text-amber-500 mr-2 mt-1"></i>
+                            <span>AI/ML & Healthcare Technology</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="text-amber-500 mr-2 mt-1"></i>
+                            <span>Cross-functional Leadership</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-12 text-center glow-text">Leadership & Operations Experience</h2>
+        
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-amber-500/30"></div>
+            
+            <!-- Timeline item 1 -->
+            <div class="mb-16 flex flex-col md:flex-row justify-between items-start relative">
+                <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8">
+                    <div class="bg-dark-800 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-amber-500 mb-2">Chief Technology Officer</h3>
+                        <p class="text-gray-400 mb-2">Betterliving Group Pvt. Ltd. | Feb 2022 – Present</p>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex">
+                                <i data-feather="check" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>Digital transformation to data-driven e-commerce platform</span>
+                            </li>
+                            <li class="flex">
+                                <i data-feather="check" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>End-to-end cloud infrastructure on Google Cloud Platform</span>
+                            </li>
+                            <li class="flex">
+                                <i data-feather="check" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>Automated workflows reducing manual operations by 80%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden md:block md:w-2/12 flex justify-center">
+                    <div class="relative h-full flex items-center justify-center">
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+                <div class="md:w-5/12 md:pl-8">
+                    <div class="bg-dark-800 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-amber-500 mb-2">Key Achievements</h3>
+                        <ul class="space-y-3">
+                            <li class="flex">
+                                <i data-feather="award" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>Built high-performing technical teams from scratch</span>
+                            </li>
+                            <li class="flex">
+                                <i data-feather="award" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>AI-powered business intelligence for predictive analytics</span>
+                            </li>
+                            <li class="flex">
+                                <i data-feather="award" class="text-amber-500 mr-2 mt-1"></i>
+                                <span>Cross-functional operations management (supply chain, CX)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More timeline items would go here -->
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-12 text-center glow-text">Education & Continuous Learning</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Education Card 1 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-2">Bachelor of Science in Data Science & AI</h3>
+                <p class="text-gray-400 mb-4">IIT Guwahati | 2024 – Present</p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i data-feather="book" class="text-amber-500 mr-2 mt-1"></i>
+                        <span>Relevant coursework: AI/ML, healthcare informatics, data engineering</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Education Card 2 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-2">Advanced Sanskrit Studies</h3>
+                <p class="text-gray-400 mb-4">Nepal Sanskrit University | 2023 – 2024</p>
+            </div>
+            
+            <!-- Education Card 3 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-2">High School Diploma (Science Focus)</h3>
+                <p class="text-gray-400 mb-4">St. Lawrence High School | 2020 – 2022</p>
+            </div>
+            
+            <!-- Education Card 4 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-2">Professional Development</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i data-feather="certificate" class="text-amber-500 mr-2 mt-1"></i>
+                        <span>100+ certifications (Coursera, healthcare & tech programs)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-12 text-center glow-text">Technical Expertise</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Skill Category 1 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                    <i data-feather="cpu" class="text-amber-500 mr-3"></i>
+                    <h3 class="text-xl font-bold">AI & Healthcare Tech</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Clinical AI Systems</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">ML Pipelines</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Data Analytics</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Computer Vision</span>
+                </div>
+            </div>
+            
+            <!-- Skill Category 2 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                    <i data-feather="cloud" class="text-amber-500 mr-3"></i>
+                    <h3 class="text-xl font-bold">Cloud & Infrastructure</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">AWS</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Azure</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">GCP</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">DevOps</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Cybersecurity</span>
+                </div>
+            </div>
+            
+            <!-- Skill Category 3 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                    <i data-feather="code" class="text-amber-500 mr-3"></i>
+                    <h3 class="text-xl font-bold">Full-Stack Development</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">HTML/CSS</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">WordPress</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Database Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-12 text-center glow-text">Project Portfolio</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-3">AI Generated Human Model for Social Media Influencer</h3>
+                <p class="text-gray-300 mb-4">Developed end-to-end AI system for creating realistic human avatars for digital marketing. Integrated computer vision, deep learning, and real-time rendering technologies.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">AI/ML</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Computer Vision</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Deep Learning</span>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="bg-dark-800 rounded-xl p-8 shadow-lg hover:border-l-4 hover:border-amber-500 transition">
+                <h3 class="text-xl font-bold text-amber-500 mb-3">Intelligent Web Scraping System</h3>
+                <p class="text-gray-300 mb-4">Built automated system for document extraction and processing from complex websites. Implemented robust error handling and scalability features.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Automation</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Web Scraping</span>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full">Data Processing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="section-divider my-8"></div>
+        <h2 class="text-3xl font-bold mb-12 text-center glow-text">Get Connected</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="mail" class="text-amber-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p class="text-gray-300">sb@bhattaraisaurav.com.np</p>
+                            <p class="text-gray-300">sauravbhofficial@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="globe" class="text-amber-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold">Website</h4>
+                            <p class="text-gray-300">bhattaraisaurav.com.np</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="text-amber-500 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold">Location</h4>
+                            <p class="text-gray-300">Available for immediate relocation to India operations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold mt-10 mb-6">Connect With Me</h3>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/sbhattarai11" class="w-12 h-12 rounded-full bg-dark-800 flex items-center justify-center hover:bg-amber-500 transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://www.twitter.com/sauravbofficial" class="w-12 h-12 rounded-full bg-dark-800 flex items-center justify-center hover:bg-amber-500 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sauravreal/" class="w-12 h-12 rounded-full bg-dark-800 flex items-center justify-center hover:bg-amber-500 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sauravbofficial" class="w-12 h-12 rounded-full bg-dark-800 flex items-center justify-center hover:bg-amber-500 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://www.dribbble.com/sauravbofficial" class="w-12 h-12 rounded-full bg-dark-800 flex items-center justify-center hover:bg-amber-500 transition">
+                        <i data-feather="dribbble"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2">Name</label>
+                        <input type="text" id="name" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2">Email</label>
+                        <input type="email" id="email" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-amber-500 text-dark-900 font-semibold rounded-lg hover:bg-amber-600 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 border-t border-amber-500/20 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold text-amber-500">SB</span>
+                        <span class="ml-2 text-gray-400">Saurav Bhattarai</span>
+                    </div>
+                    <p class="mt-2 text-gray-500">Data Science & AI Leader</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="/privacy" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition">Terms of Use</a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition">Disclaimer</a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p>&copy; 2023 Saurav Bhattarai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
